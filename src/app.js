@@ -44,6 +44,20 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/', (req, res) => {
+    res.render('help.hbs', {
+        title : 'Help',
+        name : 'mukesh.bhatia85@gmail.com'
+    })
+})
+
+app.get('/favicon.ico', (req, res) => {
+    res.render('help.hbs', {
+        title : 'Help',
+        name : 'mukesh.bhatia85@gmail.com'
+    })
+})
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
